@@ -1,0 +1,35 @@
+$heightTransparent: 20px;
+.result {
+  margin-bottom: 16px;
+  padding: 8px 0;
+  white-space: break-spaces;
+  word-wrap: break-word;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  transition: max-height 2s linear;
+  -moz-transition: max-height 2s linear;
+  -webkit-transition: max-height 2s linear;
+  span {
+    transition: max-height 2s linear;
+    -moz-transition: max-height 2s linear;
+    -webkit-transition: max-height 2s linear;
+  }
+}
+.gradient {
+  &:before {
+    background: linear-gradient(transparent $heightTransparent, white);
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+  }
+}
+.control {
+  > a {
+    text-decoration: none;
+    color: red;
+  }
+}
